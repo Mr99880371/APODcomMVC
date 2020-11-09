@@ -1,0 +1,56 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/2e/19/83/2e19839315d72ce2611b68ba393b0e00.jpg");
+    background-color: transparent;
+    position: fixed;
+}
+
+h1 {
+    display: inline-block;
+    text-align: center;
+    width: 91%;
+    vertical-align: top;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    ;
+    padding: 65px;
+}
+
+.form {
+    text-align: center;
+    width: 100%;
+    vertical-align: top;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    padding: 5px;
+    margin: auto;
+}
+
+.form-group {
+    display: inline-block;
+    margin: 0% 450px;
+    padding: 10px 25px;
+    width: 30%;
+}
+
+.form-control {
+    text-align: center;
+    width: 87%;
+    vertical-align: top;
+    padding: 9px;
+    margin: 5%;
+}
+
+.btn-primary {
+    width: 22%;
+    padding: 13px 0;
+    margin: 6% 210px;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 75px;
+    transition: 1s all;
+    cursor: pointer;
+}
