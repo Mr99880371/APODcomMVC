@@ -1,7 +1,9 @@
 body {
     background-image: url("https://i.pinimg.com/originals/2e/19/83/2e19839315d72ce2611b68ba393b0e00.jpg");
     background-color: transparent;
-    position: fixed;
+    /* position: fixed; */
+    color: white;
+    text-align: center;
 }
 
 h1 {
@@ -51,6 +53,5 @@ h1 {
     font-weight: bold;
     font-size: 22px;
     border-radius: 75px;
-    transition: 1s all;
     cursor: pointer;
 }
