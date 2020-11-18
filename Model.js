@@ -4,7 +4,6 @@ class Model {
         console.log("criando a classe")
 
         this._usuario = usuario;
-        this._html = html_url;
         this._imagem = "";
         this._id = "";
         this._documentacao = "";
@@ -13,23 +12,46 @@ class Model {
 
     Buscar() {
 
-        console.log("buscando a pessoa...");
+            console.log("buscando a pessoa...");
 
-        let usuario = this._usuario;
-        var request = new XMLHttpRequest();
+            let usuario = this._usuario;
+            var request = new XMLHttpRequest();
 
-        request.addEventListener('load', () => {
+            request.addEventListener('load', () => {
 
-            if (request.status == 200) {
-                let dados = this._Reorganiza(request.responseText)
-                this._TrazerDados(dados)
-            }
-        })
+                if (request.status == 200) {
+                    let dados = this._Reorganiza(request.responseText)
+                    this._TrazerDados(dados)
+                }
+            })
 
-        request.open("GET", `https://api.github.com/users/${usuario}`, false);
+            request.open("GET", `https://api.github.com/users/${usuario}`, false);
 
-        request.send();
-    }
+            request.send();
+        }
+        //Tentativa de por a lista de repositórios na página html(parte Model):
+
+    // LocalizaRepos() {
+
+    //     console.log("buscando a pessoa...");
+
+    //     let usuario = this._usuario;
+    //     let repos = this._documentacao;
+
+    //     var request = new XMLHttpRequest();
+
+    //     request.addEventListener('load', () => {
+
+    //         if (request.status == 200) {
+    //             let dados = this._Reorganiza(request.responseText)
+    //             this._TrazerDados(dados)
+    //         }
+    //     })
+
+    //     request.open("GET", `https://api.github.com/users/${usuario}/repos`, false);
+
+    //     request.send();
+    // }
 
 
     _Reorganiza(responseText) {
@@ -42,7 +64,7 @@ class Model {
     _TrazerDados(dados) {
 
         this._usuario = dados.login;
-        this._html_url = dados.html_url;
+        this._html_url = dados.html_repos_url;
         this._imagem = dados.avatar_url;
         this._id = dados.id;
         this._documentacao = dados.repos_url;
